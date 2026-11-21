@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17633A">
+  <title>NutriCart Mobile Demo</title>
+  <meta name="description" content="Interactive NutriCart demo: adaptive meal planning, grocery basket, delivery and cooking guidance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="stage">
+    <aside class="demo-note" aria-label="Demo guide">
+      <span class="eyebrow">Investor demo</span>
+      <h1>Nutrition that moves with real life.</h1>
+      <p>Watch NutriCart Copilot turn Alex’s goals, schedule, preferences and budget into an explainable weekly plan and basket.</p>
+      <div class="mini-flow"><span>Understand</span><i></i><span>Generate</span><i></i><span>Optimise</span><i></i><span>Adapt</span></div>
+      <p class="fine">Illustrative data only · no medical advice · no live retailer transaction</p>
+    </aside>
+
+    <section class="phone" aria-label="NutriCart mobile application">
+      <div class="statusbar" aria-hidden="true"><span>9:41</span><span class="status-icons">● ◔ ▰</span></div>
+      <header class="appbar">
+        <button class="brand" data-nav="home" aria-label="Go to home"><span class="brand-mark">N</span><span>NutriCart</span></button>
+        <div class="app-actions">
+          <span class="demo-pill">Demo</span>
+          <button class="icon-btn" id="helpBtn" aria-label="About this demo">?</button>
+        </div>
+      </header>
+
+      <div id="app" class="viewport" aria-live="polite"></div>
+
+      <nav class="bottom-nav" aria-label="Primary navigation">
+        <button data-nav="home" class="nav-item"><span class="nav-icon">⌂</span><span>Home</span></button>
+        <button data-nav="meals" class="nav-item"><span class="nav-icon">◉</span><span>Meals</span></button>
+        <button data-nav="copilot" class="nav-item copilot-nav"><span class="nav-icon">✦</span><span>Ask NutriCart</span></button>
+        <button data-nav="basket" class="nav-item"><span class="nav-icon">▱</span><span>Basket</span><b id="basketBadge" class="badge hidden">0</b></button>
+        <button data-nav="profile" class="nav-item"><span class="nav-icon">☺</span><span>Profile</span></button>
+      </nav>
+    </section>
+  </main>
+
+  <div id="modalRoot"></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
